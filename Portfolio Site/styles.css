@@ -1,0 +1,140 @@
+html {
+	box-sizing: border-box;
+	font-family: "Calibri";
+}
+
+body {
+	opacity: 0;
+	transition: 1s ease;
+}
+
+body:after {
+	content: "";
+	display: block;
+	height: 30px;
+}
+
+.container {
+	margin: 0 auto;
+	max-width: 1000px;
+	width: 90%;
+}
+
+img {
+	border: 1px solid black;
+	max-width: 100%;
+	object-fit: contain;
+}
+
+
+.active {
+	opacity: 1;
+}
+
+/***** HEADER STYLES *****/
+
+.title {
+	margin-top: 20px;
+	text-align: center;
+}
+
+@media only screen and (min-width: 660px){
+	.title { display: flex; }
+	.title h1 { text-align: left; }
+	.title h2 { align-self: flex-end ; }
+}
+
+.title h1 {
+	font-size: 5em;
+}
+
+.title h2 {
+	font-size: 1em;
+	padding-bottom: 10px;
+}
+
+/***** DESCRIPTION STYLES *****/
+
+.description { 
+	font-size: 18px;
+	line-height: 1.2;
+	margin: 20px 0;
+	text-align: justify;
+}
+
+/***** SKILLS STYLES *****/		
+
+.skills ul li {
+	border: 1px solid black;
+	color: white;
+	display: flex;
+	padding: 2%;
+	position: relative;
+}
+
+.language:nth-child(1) { background-color: indianred; }
+.language:nth-child(2) { background-color: purple; }
+.language:nth-child(3) { background-color: orange; }
+.language:nth-child(4) { background-color: slateblue; }
+.language:nth-child(5) { background-color: brown; }
+
+@media only screen and (min-width: 660px) {
+	.skills:hover { cursor: pointer; }
+	.language:hover span { cursor: pointer; opacity: 1; }
+	.skills ul { display: flex; flex-direction: row; }
+	.language { flex: 1; justify-content: center; }	
+	.skills .sample { position: absolute; bottom: 0; opacity: 0; transition: 1s ease; }
+}
+
+
+
+/***** FEATURED WORK STYLES *****/
+
+.featured-work {
+	margin: 20px 0 0 0;
+}
+
+.featured-work h2 {
+	font-size: 2.8em;
+	text-align: center;
+}
+
+@media only screen and (min-width: 660px) {
+	.featured-work h2 { text-align: left; }
+}
+
+.featured-work ul {
+	display: flex;
+	flex-wrap: wrap;
+	margin-top: 20px;
+}
+
+@media only screen and (min-width: 660px) {
+	.featured-work ul { flex-wrap: nowrap; justify-content: space-around; }
+}
+
+.featured-work ul li {
+	text-align: center;
+	margin: 10px 10px;
+	width: 100%;
+}
+
+/***** FOOTER STYLES *****/
+
+footer ul {
+	align-items: center; /* works with justify content to vertically align */
+	background-color: white;
+	bottom: 0;
+	box-shadow: 0 -4px 9px 0 rgba(0,0,0,0.08);
+	display: flex;
+	height: 30px; /* height required to vertically align with align-items */
+	justify-content: space-around;
+	position: fixed;
+	width: 100%;
+}
+
+footer ul a {
+	color: black;
+	text-decoration: none;
+}
+
